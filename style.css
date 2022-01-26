@@ -1,4 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* GLOBAL */
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* TYPOGRAPHY */
+
+.description {
+  font-size: 18px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
+/* LAYOUT */
+.container {
+  background-color: hsl(216, 50%, 16%);
+  width: 15rem;
+  padding: 1em;
+  border-radius: 15px;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.spec-row {
+  padding: 0;
+}
+
+.right-col {
+}
+
+.divider {
+  border: none;
+  border-bottom: 1.5px solid hsl(215, 32%, 27%);
+}
+
+/* IMAGES */
+.image-container {
+  position: relative;
+}
+.main-img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.eye-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.main-img:hover + .hidden {
+  display: block;
+}
+
+.avatar-img {
+  width: 2em;
+  border-radius: 100%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+/* ATTRIBUTION FOOTER */
 .attribution {
+  position: absolute;
+  bottom: 0;
   font-size: 11px;
   text-align: center;
 }
