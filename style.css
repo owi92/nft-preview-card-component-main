@@ -1,7 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap');
+
+/*=============
+     GLOBAL 
+=============*/
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*===============
+    TYPOGRAPHY 
+===============*/
+h2 {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.description,
+.right-col,
+.credit {
+  font-size: 17px;
+  font-weight: 200;
+  color: hsl(215, 51%, 70%);
+
+  line-height: 1.5;
+}
+
+.author {
+  color: hsl(0, 0%, 100%);
+}
+
+h2:hover,
+.author:hover,
+.main-img:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+/*==============
+     LAYOUT 
+===============*/
+.container {
+  background-color: hsl(216, 50%, 16%);
+  width: 28ch;
+  padding: 1em;
+  border-radius: 15px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.description {
+  margin: -7px 0 13px 0;
+}
+
+.spec-row {
+  display: flex;
+}
+
+.left-col {
+  width: 60%;
+  color: hsl(178, 100%, 50%);
+}
+
+.left-col,
+.right-col {
+  padding-bottom: 0.7em;
+}
+
+.divider {
+  border: none;
+  border-bottom: 1.5px solid hsl(215, 32%, 27%);
+}
+
+.credit {
+  padding: 0.8em 0 0.4em 0;
+  display: flex;
+}
+
+.credit p {
+  margin: auto auto auto -2.3em;
+}
+
+/*===============
+      IMAGES 
+================*/
+.image-container {
+  position: relative;
+}
+
+.main-img {
+  width: 28ch;
+  border-radius: 8px;
+}
+
+.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28ch;
+  height: 28ch;
+  border-radius: 8px;
+  display: none;
+}
+
+.image-container:hover .after {
+  display: block;
+  transition: all 0.2s ease;
+  background: hsl(178, 100%, 50%, 0.4);
+  cursor: pointer;
+}
+
+.eye-img,
+.hidden {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.image-container:hover > .hidden,
+.eye-img:hover {
+  display: block;
+}
+
+.spec-row img {
+  position: relative;
+  top: 3px;
+
+  margin-right: 3px;
+}
+
+.avatar-img {
+  width: 1.8em;
+  border-radius: 100%;
+  border: 1px solid hsl(0, 0%, 100%);
+
+  margin: auto auto auto 0;
+}
+
+/*==================
+ ATTRIBUTION FOOTER 
+==================*/
 .attribution {
+  position: absolute;
+  bottom: 0;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/*===============
+   MEDIA QUERIES 
+===============*/
+@media screen and (min-width: 992px) {
+  .container,
+  .main-img {
+    width: 24ch;
+  }
+
+  .after {
+    width: 24ch;
+    height: 24ch;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+
+  .description,
+  .spec-row,
+  .credit p {
+    font-size: 15px;
+  }
+
+  .avatar-img {
+    width: 1.5em;
+  }
 }
