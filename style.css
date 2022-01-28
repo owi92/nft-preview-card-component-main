@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap');
 
-/* GLOBAL */
+/*=============
+     GLOBAL 
+=============*/
 body {
   font-family: 'Outfit', sans-serif;
   background-color: hsl(217, 54%, 11%);
   color: hsl(0, 0%, 100%);
 }
 
-/* TYPOGRAPHY */
+/*===============
+    TYPOGRAPHY 
+===============*/
 h2 {
   font-size: 1.35rem;
   font-weight: 500;
@@ -34,7 +38,9 @@ h2:hover,
   cursor: pointer;
 }
 
-/* LAYOUT */
+/*==============
+     LAYOUT 
+===============*/
 .container {
   background-color: hsl(216, 50%, 16%);
   width: 28ch;
@@ -80,14 +86,33 @@ h2:hover,
   margin: auto auto auto -2.3em;
 }
 
-/* IMAGES */
+/*===============
+      IMAGES 
+================*/
 .image-container {
   position: relative;
 }
 
 .main-img {
-  border-radius: 8px;
   width: 28ch;
+  border-radius: 8px;
+}
+
+.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28ch;
+  height: 28ch;
+  border-radius: 8px;
+  display: none;
+}
+
+.image-container:hover .after {
+  display: block;
+  transition: all 0.2s ease;
+  background: hsl(178, 100%, 50%, 0.4);
+  cursor: pointer;
 }
 
 .eye-img,
@@ -103,7 +128,7 @@ h2:hover,
   display: none;
 }
 
-.main-img:hover + .hidden,
+.image-container:hover > .hidden,
 .eye-img:hover {
   display: block;
 }
@@ -123,7 +148,9 @@ h2:hover,
   margin: auto auto auto 0;
 }
 
-/* ATTRIBUTION FOOTER */
+/*==================
+ ATTRIBUTION FOOTER 
+==================*/
 .attribution {
   position: absolute;
   bottom: 0;
@@ -132,4 +159,34 @@ h2:hover,
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/*===============
+   MEDIA QUERIES 
+===============*/
+@media screen and (min-width: 992px) {
+  .container,
+  .main-img {
+    width: 24ch;
+  }
+
+  .after {
+    width: 24ch;
+    height: 24ch;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+
+  .description,
+  .spec-row,
+  .credit p {
+    font-size: 15px;
+  }
+
+  .avatar-img {
+    width: 1.5em;
+  }
 }
