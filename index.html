@@ -3,7 +3,10 @@
   <head>
     <!-- displays site properly based on user's device -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,initial-scale=1.0"
+    />
 
     <!-- FAVICON -->
     <link
@@ -20,55 +23,92 @@
   </head>
 
   <body>
-    <main class="container">
-      <div class="image-container">
-        <img class="main-img" src="images/image-equilibrium.jpg" alt="" />
+    <!-- main: container -->
+    <main class="main">
+      <!-- image-container  -->
+      <div class="top-container">
+        <!-- main-img -->
+        <img
+          class="top-container__img"
+          src="images/image-equilibrium.jpg"
+          alt=""
+        />
 
-        <div class="after"></div>
+        <!-- after -->
+        <div class="top-container__overlay"></div>
 
-        <div class="hidden">
-          <img src="images/icon-view.svg" alt="" class="eye-img" />
+        <!-- hidden -->
+        <div class="top-container--hidden">
+          <!-- eye-img -->
+          <img
+            class="image-container__eye-img"
+            src="images/icon-view.svg"
+            alt=""
+          />
         </div>
       </div>
 
-      <h2>Equilibrium #3429</h2>
+      <div class="middle-container">
+        <h1 class="middle-container__title">Equilibrium #3429</h1>
 
-      <p class="description">
-        Our Equilibrium collection promotes balance and calm.
-      </p>
+        <!-- description -->
+        <p class="middle-container__description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
 
-      <div class="spec-row">
-        <div class="left-col">
-          <img src="images/icon-ethereum.svg" alt="" />
-          0.041 ETH
+        <!-- spec-row -->
+        <div class="middle-container__specs">
+          <!-- left-col -->
+          <div class="middle-container__left">
+            <img
+              class="middle-container__img"
+              src="images/icon-ethereum.svg"
+              alt=""
+            />
+            0.041 ETH
+          </div>
+
+          <!-- right-col -->
+          <div class="middle-container__right">
+            <img
+              class="middle-container__img"
+              src="images/icon-clock.svg"
+              alt=""
+            />
+            3 days left
+          </div>
         </div>
 
-        <div class="right-col">
-          <img src="images/icon-clock.svg" alt="" />
-          3 days left
-        </div>
+        <div class="middle-container__divider"></div>
       </div>
 
-      <div class="divider"></div>
+      <!-- credit -->
+      <div class="bottom-container">
+        <!-- avatar-img -->
+        <img
+          class="bottom-container__img"
+          src="images/image-avatar.png"
+          alt=""
+        />
 
-      <div class="credit">
-        <img class="avatar-img" src="images/image-avatar.png" alt="" />
-
-        <p>
+        <p class="bottom-container__p">
           Creation of
-          <span class="author">Jules Wyvern</span>
+          <!-- author -->
+          <span class="bottom-container__author">Jules Wyvern</span>
         </p>
       </div>
     </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor
-      </a>
-      . Coded by
-      <a href="#">Ole</a>
-      .
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a href="#">Ole</a>
+        .
+      </div>
+    </footer>
   </body>
 </html>
