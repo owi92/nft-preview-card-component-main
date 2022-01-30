@@ -16,8 +16,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/Screenshot 2022-01-30 at 12-06-45 Frontend Mentor NFT preview card component.png)
+![Screenshot](images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/owi92/nft-preview-card-component-main)
-- Live Site URL: [Add live site URL here](https://owi92.github.io/nft-preview-card-component-main/)
+- Solution URL: [(https://github.com/owi92/nft-preview-card-component-main)]
+- Live Site URL: [(https://owi92.github.io/nft-preview-card-component-main/)]
 
 ## My process
 
@@ -132,12 +130,12 @@ I did watch some css-specific videos from Kevin Powell on youtube, which are rea
 
 I also do like to listen to quiet background music while coding/researching.
 
-- [Example resource 1](https://www.youtube.com/kepowob) - I find this to be a great rescource to learn new and old CSS-tricks and practices.
-- [Example resource 2](https://www.youtube.com/watch?v=otJM19ChEYs&t=1s) - <3
+- [(https://www.youtube.com/kepowob)] - I find this to be a great rescource to learn new and old CSS-tricks and practices.
+- [(https://www.youtube.com/watch?v=otJM19ChEYs&t=1s)] - <3
 
 ## Author
 
-- Website - [Ole](https://github.com/owi92)
+- Website - [github](https://github.com/owi92)
 - Frontend Mentor - [@owi92](https://www.frontendmentor.io/profile/owi92)
 
 ## Acknowledgments
