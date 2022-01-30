@@ -1,60 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap');
 
-/*========================
-          GLOBAL 
-=========================*/
+/*===================
+        GLOBAL      
+====================*/
 body {
-  font-family: 'Outfit', sans-serif;
   background-color: hsl(217, 54%, 11%);
   color: hsl(0, 0%, 100%);
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: min(4.4vw, 1rem);
+  padding-top: 4rem;
 }
 
-/*========================
-        TYPOGRAPHY 
-=========================*/
-.middle-container__title {
-  font-size: 1.35rem;
-  font-weight: 500;
+.main {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  margin: auto;
+  max-width: min(100%, 25ch);
+  padding: min(4.6vw, 1.2rem);
 }
 
-.middle-container__description,
-.middle-container__right,
-.bottom-container {
-  font-size: 1rem;
+/*===================
+    TOP-CONTAINER    
+===================*/
+.top-container {
+  position: relative;
+  font-size: 0;
+}
+
+.top-container__img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: 100%;
+}
+
+.top-container__overlay--hidden {
+  position: absolute;
+  inset: 0;
+
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.top-container__img-eye--hidden {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+
+  max-width: min(100%, 13vw);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/*======================
+    MIDDLE-CONTAINER    
+======================*/
+.middle-container {
+  font-size: min(4.85vw, 1rem);
   font-weight: 200;
   color: hsl(215, 51%, 70%);
 
   line-height: 1.5;
 }
 
-.bottom-container__author {
+.middle-container__title {
+  font-size: min(7vw, 1.5rem);
+  font-weight: 400;
   color: hsl(0, 0%, 100%);
-}
-
-.middle-container__title:hover,
-.bottom-container__author:hover,
-.top-container__img:hover {
-  color: hsl(178, 100%, 50%);
-  cursor: pointer;
-  transition: 0.6s ease-in-out;
-}
-
-/*=======================
-          LAYOUT 
-========================*/
-.main {
-  background-color: hsl(216, 50%, 16%);
-  width: 28ch;
-  /* max-width: 100%; */
-  /* min-height: 400px; */
-  padding: 1em;
-  border-radius: 15px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transition: color 0.3s ease-in-out;
 }
 
 .middle-container__description {
@@ -63,85 +78,45 @@ body {
 
 .middle-container__specs {
   display: flex;
-}
-
-.middle-container__left {
-  width: 60%;
-  color: hsl(178, 100%, 50%);
-}
-
-.middle-container__left,
-.middle-container__right {
+  font-size: min(4.5vw, 1rem);
+  font-weight: 300;
   padding-bottom: 0.7em;
-}
-
-.middle-container__divider {
-  border: none;
-  border-bottom: 1.5px solid hsl(215, 32%, 27%);
-}
-
-.bottom-container {
-  padding: 0.8em 0 0.4em 0;
-  display: flex;
-}
-
-.bottom-container__p {
-  margin: auto auto auto -2.3em;
-}
-
-/*====================
-        IMAGES 
-====================*/
-.top-container {
-  position: relative;
-}
-
-.top-container__img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.top-container__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28ch;
-  height: 28ch;
-  border-radius: 8px;
-  opacity: 0;
-}
-
-.top-container:hover .top-container__overlay {
-  display: block;
-  opacity: 1;
-  background: hsl(178, 100%, 50%, 0.4);
-  cursor: pointer;
-  transition: 0.25s ease-in-out;
-}
-
-.top-container__eye-img,
-.top-container--hidden {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.top-container--hidden {
-  display: none;
-}
-
-.top-container:hover > .top-container--hidden,
-.top-container__eye-img:hover {
-  display: block;
 }
 
 .middle-container__img {
   position: relative;
   top: 3px;
 
+  max-width: min(6vw, 100%);
   margin-right: 3px;
+}
+
+.middle-container__left {
+  width: 60%;
+  font-weight: 400;
+  color: hsl(178, 100%, 50%);
+}
+
+.middle-container__right {
+  width: 40%;
+}
+
+.middle-container__divider {
+  border: none;
+  border-bottom: 1.9px solid hsl(215, 32%, 27%);
+}
+
+/*======================
+    BOTTOM-CONTAINER    
+======================*/
+.bottom-container {
+  padding: 0.8em 0 0.4em 0;
+  display: flex;
+  font-size: min(4.5vw, 0.9rem);
+  font-weight: 200;
+  color: hsl(215, 51%, 70%);
+
+  line-height: 1.5;
 }
 
 .bottom-container__img {
@@ -152,10 +127,42 @@ body {
   margin: auto auto auto 0;
 }
 
-/*======================
-      ATTRIBUTION
-======================*/
+.bottom-container__p {
+  margin: auto auto auto -3em;
+}
+
+.bottom-container__author {
+  color: hsl(0, 0%, 100%);
+  transition: color 0.3s ease-in-out;
+}
+
+/*==================
+    HOVER-STATES        
+===================*/
+.top-container:hover .top-container__overlay--hidden {
+  opacity: 1;
+  background: hsl(178, 100%, 50%, 0.3);
+  cursor: pointer;
+  /* transition: all 0.4s ease-in-out; */
+}
+
+.top-container:hover .top-container__img-eye--hidden {
+  opacity: 1;
+  /* transition: all 0.4s ease-in-out; */
+}
+
+.middle-container__title:hover,
+.bottom-container__author:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+  /* transition: color 0.3s ease-in-out; */
+}
+
+/*=================
+    ATTRIBUTION     
+==================*/
 .attribution {
+  z-index: -1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -164,61 +171,4 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-/*=========================================
-            MEDIA QUERIES 
-==========================================*/
-@media screen and (min-width: 992px) {
-  .main,
-  .top-container__img {
-    width: 24ch;
-  }
-
-  .top-container__overlay {
-    width: 24ch;
-    height: 24ch;
-  }
-
-  .middle-container__title {
-    font-size: 1.2rem;
-    margin-top: 8px;
-  }
-
-  .middle-container__description,
-  .middle-container__specs,
-  .bottom-container__p {
-    font-size: 0.95rem;
-  }
-
-  .bottom-container__img {
-    width: 1.5em;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  html {
-    font-size: 13px;
-  }
-
-  .main {
-    width: 90vw;
-    min-width: 200px;
-    max-height: 500px;
-    margin: 0 auto;
-  }
-
-  .bottom-container__img {
-    display: none;
-  }
-
-  .bottom-container {
-    margin-left: 20%;
-  }
-}
-
-@media screen and (max-height: 540px) {
-  .attribution {
-    display: none;
-  }
 }
